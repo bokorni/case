@@ -8,11 +8,48 @@
     */
 
     //ENTRADA
-
-
+    const nm1 = parseInt(prompt(`Insira o 1° número.`.trim()));
+    const nm2 = parseInt(prompt(`Insira o 2° número.`.trim()));
+    const op = prompt(`Insira a operação que deseja realizar, "+" para adição, "-' para subtração, "/" para divisão e "*" para multiplicação.`)
+    let rst = 0
     //PROCESSAMENTO
+    switch (op) {
+        case "+":
+            rst = (nm1 + nm2) 
+            break;
 
-    
+        case "-": rst = (nm1 - nm2)
+            break;
+
+        case "/": rst(nm1 / nm2)
+            break;
+
+        case "*": rst(nm1 * nm2)
+            break;
+
+    }
+
+    let msg = `O resultado desta operação é ${rst}, este número é `
+
+    switch (rst % 2) {
+        case 0: msg += "par,"
+            break;
+        case 1: msg += "ímpar,"
+            break;
+    }
+    switch (Number.isInteger(rst)) {
+        case true: msg += "inteiro e"
+            break;
+        case false: msg += "decimal e"
+            break;
+    }
+    switch (rst >= 0) {
+        case true: msg += " positivo"
+            break;
+        case false: msg += " negativo"
+            break;
+    }
+    alert(msg);
     //SAÍDA
 
 </script>
