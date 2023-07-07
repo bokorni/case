@@ -6,11 +6,60 @@
     */
 
     //ENTRADA
+    const ms = Number (prompt(`Informe o número do mês que você está.`.trim()));
+    const hm = prompt(`Informe o hemisfério que você está "N" para norte e "S" para sul.`.trim().toUpperCase());
 
-    
     //PROCESSAMENTO
+    switch (hm) {
+        case "N":
+            switch (ms) {
+                case 1:
+                case 2:
+                case 3:
+                    alert(`É inverno`)
+                    break;
+                case 4:
+                case 5:
+                case 6:
+                    alert(`É primavera`)
+                    break;
+                case 7:
+                case 8:
+                case 9:
+                    alert(`É verão`)
+                    break;
+                case 10:
+                case 11:
+                case 12:
+                    alert(`É outono`)
+            }
+    }
+    switch (hm) {
+        case "S":
+            switch (ms) {
+                case 1:
+                case 2:
+                case 3:
+                    alert(`É primavera`)
+                    break;
+                case 4:
+                case 5:
+                case 6:
+                    alert(`É outono`)
+                    break;
+                case 7:
+                case 8:
+                case 9:
+                    alert(`É inverno`)
+                    break;
+                case 10:
+                case 11:
+                case 12:
+                    alert(`É verão`)
 
+            }
 
+    }
     //SAÍDA
 
 </script>

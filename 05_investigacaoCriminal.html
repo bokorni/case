@@ -11,9 +11,50 @@
     */
 
     //ENTRADA
+    const tel = prompt(`Vocẽ telefonou para a vítima? Responda com S ou N`.toUpperCase().trim());
+    const loc = prompt(`Vocẽ esteve no local do crime? Responda com S ou N`.toUpperCase().trim());
+    const mora = prompt(`Vocẽ mora perto da vítima? Responda com S ou N`.toUpperCase().trim());
+    const dev = prompt(`Vocẽ devia para a vítima? Responda com S ou N`.toUpperCase().trim());
+    const tra = prompt(`Vocẽ já trabalhou com a vítima? Responda com S ou N`.toUpperCase().trim());
 
-    
     //PROCESSAMENTO
+    let nm = 0
+    switch (tel) {
+        case "S": nm++
+            break;
+    }
+    switch (loc) {
+        case "S": nm++
+            break;
+    }
+    switch (mora) {
+        case "S": nm++
+            break;
+    }
+    switch (dev) {
+        case "S": nm++
+            break;
+    }
+    switch (tra) {
+        case "S":
+            break;
+    }
+    switch (nm) {
+        case 0:
+        case 1:
+            alert(`Você é inocente.`)
+            break;
+        case 2: alert(`Você é suspeito.`)
+            break;
+        case 3:
+        case 4:
+            alert(`Você é cúmplice.`)
+            break;
+        case 5: alert(`Você é o assassino.`)
+
+    }
+
+
 
 
     //SAÍDA

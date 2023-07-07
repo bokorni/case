@@ -8,11 +8,21 @@
     // - cães grandes: fator 7.
 
     // ENTRADA
+    const prt = prompt(`Insira o porte de seu cão: P para pequeno, M para médio e G para grande`.trim().toUpperCase());
+    const id = Number(prompt(`Insira a idade de seu cão`));
+    let idc = 0
 
-    
     // PROCESSAMENTO
-
-    
+    switch (prt) {
+        case "P": idc = (id * 5)
+            break;
+        case "M": idc = (id * 6)
+            break;
+        case "G": idc = (id * 7)
+            break;
+    }
+    let msg = `A idade de seu cão é ${idc} em anos humanos`
+    alert(msg)
     // SAÍDA
 
-    </script>
+</script>
